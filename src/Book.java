@@ -40,11 +40,25 @@ public class Book {
 
     @Override
     public String toString() {
-        return "Книга {" +
-                "Название: '" + title + '\'' +
-                ", автор: '" + author + '\'' +
-                ", номер в серии: " + numberInSeries +
-                ", число страниц: " + numberOfPage +
-                '}';
+
+        String str = "Книга { ";
+
+        if (title != null) {
+            str += "Название: '" + title + '\'';
+        }
+        if (author != null) {
+            str += ", автор: '" + author + '\'';
+        }
+        if (numberInSeries != 0) {
+            str += ", номер в серии: " + numberInSeries;
+        }
+        if (numberOfPage != 0) {
+            str += ", число страниц: " + numberOfPage;
+        }
+
+        str += '}';
+
+        return str;
+
     }
 }
